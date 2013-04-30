@@ -18,17 +18,19 @@
         <script src="my.js">
         </script>
 
+		<script src="phonegap.js"></script>
+		<script src="childbrowser.js"></script>
         <!-- User-generated js -->
         <script>
             try {
 
-    $(function() {
-
-    });
-
-  } catch (error) {
-    console.error("Your javascript has an error: " + error);
-  }
+			$(function() {
+		
+			});
+		
+		 	 } catch (error) {
+				console.error("Your javascript has an error: " + error);
+		  	}
         </script>
 
 </head>
@@ -42,7 +44,7 @@
     <div data-role="content">
         <img src="images/logo1.fw.png" alt="logo" />
         
-        <div data-role="controlgroup">
+        <div>
               
             <a href="#mycloset"
                 data-theme="e" 
@@ -58,13 +60,6 @@
                 data-iconpos="right"
                 >Mix n Match</a>
         
-           	<a href="#addclothes" 
-                data-theme="e"
-                data-role="button"
-                data-icon="arrow-r"
-                data-iconpos="right"
-                >Add Clothes</a>
-            
 
             <a href="#glamit" 
                 data-theme="e"
@@ -74,69 +69,28 @@
                 >Glam It!</a>
             
         </div><!--End of Content-->
-        
-        <div data-role="footer" 
-            data-id="footer" 
-            data-position="fixed" 
-            data-theme="a">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#home" 
-                    data-role="button"
-                    data-icon="home"
-                    >Home</a></li>
-                
-                    <li><a href="#mycloset" 
-                    data-role="button"
-                    data-icon="star"
-                    >My Closet</a></li>
-                    
-                    <li><a href="#mixnmatch" 
-                    data-role="button"
-                    data-icon="star"
-                    >Mix N Match</a></li>
-                
-                    <li><a href="#addclothes" 
-                    data-role="button"
-                    data-icon="star"
-                    >Add Clothes</a></li>
-                                        
-                    <li><a href="#glamit" 
-                    data-role="button"
-                    data-icon="star"
-                    >Glam It!</a></li>
-                </ul>
-            </div> <!--End of Navbar-->
-        </div><!--End of Footer-->
+
      
   </div> <!--End of Home page--> 
  </div>  
-         <!--Start of My Closet Page-->                 
+ 
+ <!--Start of My Closet Page-->                 
   <div id="mycloset"
     data-role="page" 
     data-theme="e" 
     data-title="My Closet"/>
        <div data-role="navbar">
             <ul>
-                <li><a href="#home" 
-                data-role="button"
-                data-icon="home"
-                >Home</a></li>
                 
-                <li><a href="#mycloset" 
+                <li class="active"><a href="#mycloset" 
                 data-role="button"
                 data-icon="star"
                 >My Closet</a></li>
                 
-                <li class="active"><a href="#mixnmatch" 
+                <li><a href="#mixnmatch" 
                 data-role="button"
                 data-icon="star"
                 >Mix N Match</a></li>
-                
-                <li><a href="#addclothes" 
-                data-role="button"
-                data-icon="star"
-                >Add Clothes</a></li>
                 
                 <li><a href="#glamit" 
                 data-role="button"
@@ -161,6 +115,13 @@
             <div id="box1">
             	<img src="images/dresses.png" alt="dresses" height="120" width="290">
             </div>
+            
+            <div data-role="button"
+            data-icon="plus"
+            data-iconpos="right">
+            Add Clothes
+            </div>
+            
     	</div><!--End of Content-->
        
   </div><!--End of Closet page-->
@@ -171,12 +132,7 @@
     data-theme="e" 
     data-title="Mix n Match"/>
        <div data-role="navbar">
-            <ul>
-                <li><a href="#home" 
-                data-role="button"
-                data-icon="home"
-                >Home</a></li>
-                
+            <ul>        
                 <li><a href="#mycloset" 
                 data-role="button"
                 data-icon="star"
@@ -185,12 +141,7 @@
                 <li class="active"><a href="#mixnmatch" 
                 data-role="button"
                 data-icon="star"
-                >Mix N Match</a></li>
-                
-                <li><a href="#addclothes" 
-                data-role="button"
-                data-icon="star"
-                >Add Clothes</a></li>
+                >MixNMatch</a></li>
   
                 <li><a href="#glamit" 
                 data-role="button"
