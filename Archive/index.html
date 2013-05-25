@@ -9,6 +9,10 @@
         <title>Clothes App</title>
         <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
         
+   
+  		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        
         <link rel="stylesheet" href="css/my.css" />
         
         <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js">
@@ -62,12 +66,17 @@
 
 	<style type="text/css">
 	#div1 {
-		width:350px;
-		height:100px;
+		width:200px;
+		height:400px;
 		padding:10px;
 		border:1px solid #aaaaaa;
 		background-color: #fff;
 	}
+
+	#drag2	{
+		margin-left: -24px;
+	}
+	
 	</style>
 
 </head>
@@ -192,11 +201,12 @@
         
         <div data-role="content">
         
-            <p>Drag the shirt image into the rectangle:</p>
+            <p>Drag the shirt and jeans into the rectangle:</p>
 
-				<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div id="div1" class="ui-widget-header" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 				<br>
-				<img id="drag1" src="images/red1.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+				<img id="drag1" src="images/red1.gif" draggable="true" ondragstart="drag(event)" width="170" height="125">
+				<img id="drag2" src="images/jeans1.gif" draggable="true" ondragstart="drag(event)" width="210" height="250">
                
             <div id="box1">
                 <img src="images/clothes.gif" alt="clothes" width="290" height="120">
