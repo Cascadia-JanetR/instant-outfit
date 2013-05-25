@@ -17,9 +17,16 @@
         </script>
         <script src="my.js">
         </script>
+        
+        <script src="js/my.js">
+        </script>
 
 		<script src="phonegap.js"></script>
 		<script src="childbrowser.js"></script>
+		
+		<script src="js/camera.js"></script>
+		<script src="js/capture.js"></script>
+		
         <!-- User-generated js -->
         <script>
             try {
@@ -32,8 +39,39 @@
 				console.error("Your javascript has an error: " + error);
 		  	}
         </script>
+        
+        <script>
+		function allowDrop(ev)
+		{
+			ev.preventDefault();
+		}
+
+		function drag(ev)
+		{
+			ev.dataTransfer.setData("Text",ev.target.id);
+		}
+
+		function drop(ev)
+		{
+			ev.preventDefault();
+			var data=ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+		</script>
+
+
+	<style type="text/css">
+	#div1 {
+		width:350px;
+		height:100px;
+		padding:10px;
+		border:1px solid #aaaaaa;
+		background-color: #fff;
+	}
+	</style>
 
 </head>
+
 <body>
     <!-- Page: Home -->
   <div id="home"
@@ -61,12 +99,12 @@
                 >Mix n Match</a>
         
 
-            <a href="#glamit" 
+            <a href="#addclothes" 
                 data-theme="e"
                 data-role="button"
                 data-icon="arrow-r"
                 data-iconpos="right"
-                >Glam It!</a>
+                >Add Clothes</a>
             
         </div><!--End of Content-->
 
@@ -92,10 +130,11 @@
                 data-icon="star"
                 >Mix N Match</a></li>
                 
-                <li><a href="#glamit" 
+                <li><a href="#addclothes" 
                 data-role="button"
                 data-icon="star"
-                >Glam It!</a></li>
+                >Add Clothes</a></li>
+                
             </ul>
         </div><!--End of Nav-->
         
@@ -119,13 +158,14 @@
             <div data-role="button"
             data-icon="plus"
             data-iconpos="right">
-            Add Clothes
+            Glam It!
             </div>
             
     	</div><!--End of Content-->
        
   </div><!--End of Closet page-->
  </div>           
+ 
       <!--Start of Mix n Match page-->
   <div id="mixnmatch"
     data-role="page" 
@@ -143,14 +183,20 @@
                 data-icon="star"
                 >MixNMatch</a></li>
   
-                <li><a href="#glamit" 
+                <li><a href="#addclothes" 
                 data-role="button"
                 data-icon="star"
-                >Glam It!</a></li>
+                >Add Clothes</a></li>
             </ul>
-        </div>
+        </div><!-- End of Mix n Match NavBar -->
         
         <div data-role="content">
+        
+            <p>Drag the shirt image into the rectangle:</p>
+
+				<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<br>
+				<img id="drag1" src="red1.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
                
             <div id="box1">
                 <img src="images/clothes.gif" alt="clothes" width="290" height="120">
@@ -164,9 +210,58 @@
                 <img src="images/glam.gif" alt="glam" width="90" height="220">
             </div>
             
-        </div>
+        </div><!-- End of Content -->
   </div><!--End of Mix n Match page-->
 </div>
+
+<!--Start of Add Clothes page-->
+  <div id="addclothes"
+    data-role="page" 
+    data-theme="e" 
+    data-title="Add Clothes"/>
+    
+       <div data-role="navbar">
+            <ul>
+                <!--<li><a href="#home" 
+                data-role="button"
+                data-icon="home"
+                >Home</a></li>-->
+                
+                <li><a href="#mycloset" 
+                data-role="button"
+                data-icon="star"
+                >My Closet</a></li>
+                
+                <li><a href="#mixnmatch" 
+                data-role="button"
+                data-icon="star"
+                >Mix N Match</a></li>
+                
+                <li class="active"><a href="#addclothes" 
+                data-role="button"
+                data-icon="star"
+                >Add Clothes</a></li>
+  
+                <!-- <li><a href="#glamit" 
+                data-role="button"
+                data-icon="star"
+                >Glam It!</a></li> -->
+            </ul>
+        </div> <!-- End of AddClothes NavBar -->
+        
+        <div data-role="content">
+        
+       		<button onclick="capturePhoto();">Capture Photo</button> <br>
+    		<button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+    		<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+    		<button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+    			<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+    			<img style="display:none;" id="largeImage" src="" />
+               
+        </div> <!-- End of Content -->
+  </div><!--End of Add Clothes page -->
+</div>
+
         
 
 </body>
