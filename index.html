@@ -9,7 +9,7 @@
         <title>Clothes App</title>
         <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
         
-   		<script src="cordova.ios.js"></script>
+   		<script src="js/cordova.ios.js"></script>
   		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
         
@@ -20,12 +20,16 @@
         <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
         </script>
 
+		<script src="phonegap.js"></script>
+		<script src="GAPlugin.js"></script>
+		<script src="childbrowser.js"></script>
 
         <script src="js/dragndrop.js"></script>
 		
 		<script src="js/camera.js"></script>
-		
 		<script src="js/capture.js"></script>
+		<script src="js/capture1.js"></script>
+		
 		
 		<script>
 		$(".drag").mobiledraganddrop({ targets: ".drop" }); 
@@ -249,12 +253,12 @@
         
         <div data-role="content">
         
-			<button onclick="capturePhoto();">Capture Photo</button> <br>
-    		<button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
-    		<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-    		<button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-    			<img style="display:none; width:60px;height:60px;" id="smallImage" src="" />
-    			<img style="display:none;" id="largeImage" src="" />
+				<button onclick="capturePhoto();">Capture Photo</button> <br>
+    			<button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+    			<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+    			<button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+    				<img style="display:none; width:60px; height:60px;" id="smallImage" src="" />
+    				<img style="display:none;" id="largeImage" src="" />
                
         </div> <!-- End of Content -->
   </div><!--End of Add Clothes page -->
