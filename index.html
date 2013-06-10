@@ -22,6 +22,9 @@
         <script src="my.js">
         </script>
         
+        <script src="js/touch.js">
+        </script>
+        
         <script src="js/my.js">
         </script>
 
@@ -30,6 +33,8 @@
 		
 		<script src="js/camera.js"></script>
 		<script src="js/capture.js"></script>
+		
+		
 		
         <!-- User-generated js -->
         <script>
@@ -76,6 +81,15 @@
 	#drag2	{
 		margin-left: -24px;
 	}
+	
+	  	div.box {
+          background-color: #598611;
+          height: 3em;
+          width: 3em;
+        }
+        div.box.taphold {
+          background-color: #BB6F04;
+        }
 	
 	</style>
 
@@ -229,6 +243,9 @@
             <div id="box3">
                 <img src="images/glam.gif" alt="glam" width="90" height="220">
             </div>
+            
+            <h3>Long-press (taphold) the green square to change its color:</h3>
+      		<div class="box"></div>
             
         </div><!-- End of Content -->
   </div><!--End of Mix n Match page-->
