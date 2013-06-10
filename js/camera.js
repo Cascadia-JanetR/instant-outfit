@@ -81,8 +81,5 @@ var pictureSource;   // picture source
     // 
     function onFail(message) {
       alert('Failed because: ' + message);
-      
-      function(imageData) {
-    // Do something with the image
-	}
-    }
+      }
+
