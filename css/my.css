@@ -81,3 +81,45 @@ body {
 li.active	{
 	background-color:#CC0;
 }
+
+	
+.drag {
+    color: White;
+    margin: 10px 2%;
+    cursor: move;
+    text-align: center;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    }
+                
+
+.selected {
+    background-color: Yellow;
+    color: Black;
+    }
+                
+.drop {
+    background-color: white;
+    color: White;
+    margin: 3px;
+    padding: 10px;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    	
+    width:200px;
+	height:400px;
+	border:1px solid #aaaaaa;
+	background-color: #fff;
+    }
+    
+.active {
+    background-color: orange;
+    cursor: crosshair;
+     }
+                
+#drag2	{
+    margin-top: -10px;
+	margin-left: -21px;
+	}

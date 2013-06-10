@@ -1,4 +1,4 @@
-    var pictureSource;   // picture source
+var pictureSource;   // picture source
     var destinationType; // sets the format of returned value 
 
     // Wait for Cordova to connect with the device
@@ -81,4 +81,8 @@
     // 
     function onFail(message) {
       alert('Failed because: ' + message);
+      
+      function(imageData) {
+    // Do something with the image
+	}
     }
