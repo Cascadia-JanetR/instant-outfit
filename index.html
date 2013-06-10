@@ -26,6 +26,8 @@
         <script src="js/touch.js">
         </script>
  -->
+        <script src="js/dragndrop.js">
+        </script>
         
         <script src="js/my.js">
         </script>
@@ -36,8 +38,9 @@
 		<script src="js/camera.js"></script>
 		<script src="js/capture.js"></script>
 		
-		
-		
+		<script>
+		$(".drag").mobiledraganddrop({ targets: ".drop" }); 
+		</script>
         <!-- User-generated js -->
         <script>
             try {
@@ -229,10 +232,10 @@
         
             <p>Drag the shirt and jeans into the rectangle:</p>
 
-				<div id="div1" class="ui-widget-header" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<div id="div1" class="ui-widget-header" ondrop="drop(event)" ondragover="allowDrop(event)" class="drop"></div>
 				<br>
-				<img id="drag1" src="images/red1.gif" draggable="true" ondragstart="drag(event)" width="170" height="125">
-				<img id="drag2" src="images/jeans1.gif" draggable="true" ondragstart="drag(event)" width="210" height="250">
+				<img id="drag1" class="drag" src="images/red1.gif" draggable="true" ondragstart="drag(event)" width="170" height="125">
+				<img id="drag2" class="drag" src="images/jeans1.gif" draggable="true" ondragstart="drag(event)" width="210" height="250">
                
             <div id="box1">
                 <img src="images/clothes.gif" alt="clothes" width="290" height="120">
