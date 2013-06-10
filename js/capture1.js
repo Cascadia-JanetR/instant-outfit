@@ -40,4 +40,35 @@ function captureSuccess(mediaFiles) {
 
 var options = { limit: 3 };
 
-navigator.device.capture.captureImage(captureSuccess, captureError, options);
+	navigator.device.capture.captureImage(captureSuccess, captureError, options);
+
+	navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    destinationType: Camera.DestinationType.DATA_URL
+ }); 
+
+function onSuccess(imageData) {
+    var image = document.getElementById('myImage');
+    image.src = "data:image/jpeg;base64," + imageData;
+}
+
+function onSuccess(imageURI) {
+    var image = document.getElementById('myImage');
+    image.src = imageURI;
+}
+
+
+
+// retrieve supported image modes
+var imageModes = navigator.device.capture.supportedImageModes;
+
+// Select mode that has the highest horizontal resolution
+ var width = 0;
+ var selectedmode;
+ for each (var mode in imageModes) {
+     if (mode.width > width) {
+         width = mode.width;
+         selectedmode = mode;
+     }
+ }
+
+
