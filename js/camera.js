@@ -16,7 +16,7 @@ var pictureSource;   // picture source
     //
     function onPhotoDataSuccess(imageData) {
       // Uncomment to view the base64 encoded image data
-      // console.log(imageData);
+      console.log(imageData);
 
       // Get image handle
       //
@@ -36,7 +36,7 @@ var pictureSource;   // picture source
     //
     function onPhotoURISuccess(imageURI) {
       // Uncomment to view the image file URI 
-      // console.log(imageURI);
+      console.log(imageURI);
 
       // Get image handle
       //
@@ -56,7 +56,7 @@ var pictureSource;   // picture source
     //
     function capturePhoto() {
       // Take picture using device camera and retrieve image as base64-encoded string
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+     	 navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
         destinationType: destinationType.DATA_URL });
     }
 
@@ -64,6 +64,7 @@ var pictureSource;   // picture source
     //
     function capturePhotoEdit() {
       // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+     
       navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
         destinationType: destinationType.DATA_URL });
     }
@@ -83,3 +84,20 @@ var pictureSource;   // picture source
       alert('Failed because: ' + message);
       }
 
+ function onSuccess(imageData) {
+      // Do stuff with the image!
+ }
+
+ function onFail(message) {
+     alert('Failed to get the picture: ' + message);
+ }
+
+ var cameraPopoverHandle = navigator.camera.getPicture(onSuccess, onFail,
+     { destinationType: Camera.DestinationType.FILE_URI,
+       sourceType: Camera.PictureSourceType.PHOTOLIBRARY });
+
+ // Reposition the popover if the orientation changes.
+ window.onorientationchange = function() {
+     var cameraPopoverOptions = new CameraPopoverOptions(0, 0, 100, 100, 0);
+     cameraPopoverHandle.setPosition(cameraPopoverOptions);
+ }
