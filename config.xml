@@ -18,5 +18,14 @@
     <author href="" email="jrasque@hotmail.com">
         Janet Rasque
     </author>
+    
+    <!--android -->
+    <plugin name="Capture" value="org.apache.cordova.Capture"/>
+    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    
+    <!--ios -->
+    <plugin name="Capture" value="CDVCapture" />
+    <plugin name="Camera" value="CDVCamera" />
+    
 
 </widget>
