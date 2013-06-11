@@ -80,7 +80,7 @@ var pictureSource;   // picture source
     //
     function capturePhotoEdit() {
       // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
-     navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality:50, destinationType:Camera.DestinationType.DATA_URL });
+     navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality:40, destinationType:Camera.DestinationType.DATA_URL });
     }
 
     // A button will call this function
