@@ -6,7 +6,8 @@ var pictureSource;   // picture source
 
     // Wait for PhoneGap to connect with the device
     //
-    document.addEventListener("deviceready",onDeviceReady,false);
+    function onLoad() {document.addEventListener("deviceready",onDeviceReady,false);
+    }
 
     // PhoneGap is ready to be used!
     //
