@@ -58,23 +58,25 @@ body {
 #box1	{
 	width: 290px;
 	height: 120px;
-	border-style: solid;
+	border-style: thin solid;
 }
 
 #box2	{
-	width: 180px;
-	height: 220px;
-	border-style: solid;
-	margin-top: 10px;
+	width: 270px;
+	height: 160px;
+	border: thin solid;
+	margin-left: 10px;
 	float: left;
 }
 
 #box3	{
-	width: 90px;
+	
+	width: 250px;
 	height: 220px;
-	border-style: solid;
-	margin-top: 10px;
-	margin-left:200px;
+	border: thin solid;
+	margin-left:10px;
+	padding-left: 20px;
+	position: relative;
 		
 }
 
@@ -120,17 +122,5 @@ li.active	{
      }
                 
 #drag2	{
-    margin-top: -10px;
-	margin-left: -21px;
-	}
-	
-#drag4	{
-	margin-top: -30px;
-	margin-left: -13px;
-	}
-	
-#drag3	{
-	margin-top: 10px;
-
-}
+	margin:
 	

@@ -25,8 +25,8 @@
 		<script src="GAPlugin.js"></script>
 		<script src="childbrowser.js"></script>
 
-        <script src="js/dragndrop.js"></script>
- 
+      	<script src="js/dragndrop.js"></script>
+	
         <script src="js/touchPunch.js"></script>
 		
 		<script src="js/camera.js"></script>
@@ -34,7 +34,6 @@
 		<script src="js/capture1.js"></script>
 		
 		
-<!-- 
 		<script>
 		function allowDrop(ev)
 		{
@@ -54,12 +53,13 @@
 		}
 		</script>
 		
- -->
-		<script>
+
+	<!-- 
+	<script>
 		$(".drag").mobiledraganddrop({ targets: ".drop" }); 
 		</script>
 		
-        <!-- User-generated js -->
+        <!~~ User-generated js ~~>
         <script>
             try {
 
@@ -78,6 +78,7 @@
 				console.error("Your javascript has an error: " + error);
 		  	}
         </script>
+ -->
 
 
 </head>
@@ -214,18 +215,38 @@
 
         
          <p>Drag the shirt and jeans into the rectangle:</p>  
-				
-				<!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
-				<div id="div1" class="drop" class="ui-widget-header" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+         
+         
+			<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<br>
+			<img id="drag1" src="images/red1.gif" draggable="true" ondragstart="drag(event)" width="120" height="125">
+			<img id="drag2" src="images/pink1.gif" draggable="true" ondragstart="drag(event)" width="120" height="125">
+			
+			<img id="drag3" src="images/jeans1.gif" draggable="true" ondragstart="drag(event)" width="120" height="125">
+			<img id="drag4" src="images/blkpnts1.gif" draggable="true" ondragstart="drag(event)" width="120" height="125">	
+			<!-- 
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>				<div id="div1" class="drop" class="ui-widget-header" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
 				<br>
-				<img id="drag1" class="drag" src="images/red1.gif" draggable="true" ondragstart="drag(event)" width="170" height="125">
-				<img id="drag3" class="drag"src="images/pink1.gif" draggable="true" ondragstart="drag(event)" width="170" height="125">
-				<img id="drag2" class="drag"src="images/jeans1.gif" draggable="true" ondragstart="drag(event)" width="210" height="250">
-				<img id="drag4" class="drag"src="images/blkpnts1.gif" draggable="true" ondragstart="drag(event)" width="210" height="250">
-               
+				<div>
+				  <p>TOPS</p>
+					<div id="box2">
+						<img id="red" class="drag" src="images/red1.gif" draggable="true" ondragstart="drag(event)" width="120" height="125">
+						<img id="pink" class="drag" src="images/pink1.gif" draggable="true" ondragstart="drag(event)" width="120" height="125">
+					</div>
+				</div>
+				
+				<div>
+				  <p>PANTS</p>
+					<div id="box3">
+						<img id="jeans" class="drag" src="images/jeans1.gif" draggable="true" ondragstart="drag(event)" width="150" height="200">
+						<img id="blkpnts" class="drag" src="images/blkpnts1.gif" draggable="true" ondragstart="drag(event)" width="170" height="200" >
+               		</div>
+               	</div>
  
-            <div id="box1">
-                <img src="images/clothes.gif" alt="clothes" width="290" height="120">
+ -->
+           <!-- 
+ 			<div id="box1">
+            	<img src="images/clothes.gif" alt="clothes" width="290" height="120">
             </div>
                 
             <div id="box2">
@@ -235,9 +256,8 @@
             <div id="box3">
                 <img src="images/glam.gif" alt="glam" width="90" height="220">
             </div>
+ -->
             
-           <!--  <h3>Long-press (taphold) the green square to change its color:</h3>
-      		<div class="box"></div> -->
             
         </div><!-- End of Content -->
   </div><!--End of Mix n Match page-->
