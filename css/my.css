@@ -99,7 +99,7 @@ li.active	{
     color: Black;
     }
                 
-.drop {
+#div1 {
     background-color: white;
     color: White;
     margin: 3px;
@@ -123,3 +123,14 @@ li.active	{
     margin-top: -10px;
 	margin-left: -21px;
 	}
+	
+#drag4	{
+	margin-top: -30px;
+	margin-left: -13px;
+	}
+	
+#drag3	{
+	margin-top: 10px;
+
+}
+	
