@@ -34,17 +34,6 @@
 		<script src="js/capture1.js"></script>
 		
 		
-		<script>
-function dragUser(user, event) {
-    event.dataTransfer.setData('User', user.id);
-}
-function dropUser(target, event) {
-    var user = event.dataTransfer.getData('User');
-    target.appendChild(document.getElementById(user)); 
-}
-</script>
-
-		
 <!-- 
 		<script>
 		function allowDrop(ev)
@@ -66,11 +55,11 @@ function dropUser(target, event) {
 		</script>
 		
  -->
-		<!-- 
-<script>
+		<script>
 		$(".drag").mobiledraganddrop({ targets: ".drop" }); 
 		</script>
-        <!~~ User-generated js ~~>
+		
+        <!-- User-generated js -->
         <script>
             try {
 
@@ -89,7 +78,6 @@ function dropUser(target, event) {
 				console.error("Your javascript has an error: " + error);
 		  	}
         </script>
- -->
 
 
 </head>
@@ -223,41 +211,19 @@ function dropUser(target, event) {
         </div><!-- End of Mix n Match NavBar -->
         
         <div data-role="content">
-        
-         <p>Drag the shirt and jeans into the rectangle:</p>
-        <div id="div1" ondrop="dropUser(this, event)" ondragenter="return false" ondragover="return false">
-		Contributors
-	</div>
-
-        <div id="unassigned" ondrop="dropUser(this, event)" ondragenter="return false" ondragover="return false">
-		<!-- 
-Unassigned
-		<a draggable="true" class="user" id="leonardo" ondragstart="dragUser(this, event)">Leonardo</a>
-		<a draggable="true" class="user" id="raphael" ondragstart="dragUser(this, event)">Raphael</a> 
-		<a draggable="true" class="user" id="michelangelo" ondragstart="dragUser(this, event)">Michelangelo</a> 
-		<a draggable="true" class="user" id="donatello" ondragstart="dragUser(this, event)">Donatello</a> 
-		<a draggable="true" class="user" id="splinter" ondragstart="dragUser(this, event)">Splinter</a> 
-		<a draggable="true" class="user" id="shredder" ondragstart="dragUser(this, event)">Shredder</a> 
- -->
-		
-		<img id="drag1" class="user" id="red" class="drag" src="images/red1.gif" draggable="true" ondragstart="dragUser(this, event)" width="170" height="125">
-		<img id="drag3" class="user" id="pink" class="drag" src="images/pink1.gif" draggable="true" ondragstart="dragUser(this, event)" width="170" height="125">
-		<img id="drag2" class="user" id="jeans" class="drag" src="images/jeans1.gif" draggable="true" ondragstart="dragUser(this, event)" width="210" height="250">
-		<img id="drag4" class="user" id="blkpnts" class="drag" src="images/blkpnts1.gif" draggable="true" ondragstart="dragUser(this, event)" widt
-		</div>
 
         
-           
-				<!-- 
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-				<!~~ <div id="div1" class="drop" class="ui-widget-header" ondrop="drop(event)" ondragover="allowDrop(event)" ></div> ~~>
+         <p>Drag the shirt and jeans into the rectangle:</p>  
+				
+				<!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
+				<div id="div1" class="drop" class="ui-widget-header" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
 				<br>
 				<img id="drag1" class="drag" src="images/red1.gif" draggable="true" ondragstart="drag(event)" width="170" height="125">
-				<img id="drag3" class="drag" src="images/pink1.gif" draggable="true" ondragstart="drag(event)" width="170" height="125">
-				<img id="drag2" class="drag" src="images/jeans1.gif" draggable="true" ondragstart="drag(event)" width="210" height="250">
-				<img id="drag4" class="drag" src="images/blkpnts1.gif" draggable="true" ondragstart="drag(event)" width="210" height="250">
+				<img id="drag3" class="drag"src="images/pink1.gif" draggable="true" ondragstart="drag(event)" width="170" height="125">
+				<img id="drag2" class="drag"src="images/jeans1.gif" draggable="true" ondragstart="drag(event)" width="210" height="250">
+				<img id="drag4" class="drag"src="images/blkpnts1.gif" draggable="true" ondragstart="drag(event)" width="210" height="250">
                
- -->
+ 
             <div id="box1">
                 <img src="images/clothes.gif" alt="clothes" width="290" height="120">
             </div>
