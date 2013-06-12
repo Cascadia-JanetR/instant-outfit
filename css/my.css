@@ -110,8 +110,9 @@ li.active	{
     -webkit-border-radius: 1em;
     border-radius: 1em;
     	
-    width:250px;
-	height:400px;
+    margin-left: 40px;
+    width:180px;
+	height:350px;
 	border:1px solid #aaaaaa;
 	background-color: #fff;
     }
@@ -121,6 +122,13 @@ li.active	{
     cursor: crosshair;
      }
                 
-#drag2	{
-	margin:
+#drag1	{
+	margin-left: 30px;
+	}
+	
+#drag3	{
+	margin-top: -25px;
+	margin-left: 18px;
+	}
+	
 	

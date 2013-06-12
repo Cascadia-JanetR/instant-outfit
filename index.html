@@ -32,13 +32,8 @@
         <script src="js/touchPunch.js"></script>
         <script src="js/camera1.js"></script>
 		
+	
 <!-- 
-		<script src="js/camera.js"></script>
-		<script src="js/capture.js"></script>
-		<script src="js/capture1.js"></script>
- -->
-		
-		
 		<script>
 		function allowDrop(ev)
 		{
@@ -57,14 +52,14 @@
 		ev.target.appendChild(document.getElementById(data));
 		}
 		</script>
+ -->
 		
 
-	<!-- 
-	<script>
+		<script>
 		$(".drag").mobiledraganddrop({ targets: ".drop" }); 
 		</script>
 		
-        <!~~ User-generated js ~~>
+        <!-- User-generated js -->
         <script>
             try {
 
@@ -83,7 +78,7 @@
 				console.error("Your javascript has an error: " + error);
 		  	}
         </script>
- -->
+
 
 
 </head>
@@ -219,18 +214,18 @@
         <div data-role="content">
 
         
-         <p>Drag the shirt and jeans into the rectangle:</p>  
+         <p>Pic a top and bottom and drag it to the rectangle:</p>  
          
-         
-			<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div id="div1" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 			<br>
-			<img id="drag1" src="images/red1.gif" draggable="true" ondragstart="drag(event)" width="120" height="125">
-			<img id="drag2" src="images/pink1.gif" draggable="true" ondragstart="drag(event)" width="120" height="125">
+			<img id="drag1" class="drag" src="images/red1.gif" draggable="true" ondragstart="drag(event)" width="120" height="120">
+			<img id="drag2" class="drag" src="images/pink1.gif" draggable="true" ondragstart="drag(event)" width="120" height="125">
 			
-			<img id="drag3" src="images/jeans1.gif" draggable="true" ondragstart="drag(event)" width="120" height="125">
-			<img id="drag4" src="images/blkpnts1.gif" draggable="true" ondragstart="drag(event)" width="120" height="125">	
+			<img id="drag3" class="drag" src="images/jeans1.gif" draggable="true" ondragstart="drag(event)" width="140" height="170">
+			<img id="drag4" class="drag" src="images/blkpnts1.gif" draggable="true" ondragstart="drag(event)" width="140" height="170">	
 			<!-- 
-	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>				<div id="div1" class="drop" class="ui-widget-header" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>				
+	<div id="div1" class="drop" class="ui-widget-header" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
 				<br>
 				<div>
 				  <p>TOPS</p>
