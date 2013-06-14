@@ -31,7 +31,7 @@
 	
         <script src="js/touchPunch.js"></script>
         <script src="js/camera1.js"></script>
-		
+
 	
 <!-- 
 		<script>
@@ -78,6 +78,52 @@
 				console.error("Your javascript has an error: " + error);
 		  	}
         </script>
+        
+        <style>
+/* 
+        #buttoncloset a
+{
+  display:block;
+  width:250px;
+  height:134px;
+  background-image:url(images/closet.jpeg);
+} 
+#buttoncloset a:hover
+{
+  background-position:left bottom;
+}
+ */
+        
+#closet	{
+	background-image:url(images/closet.jpeg);
+	width: 290px;
+	height: 80px;
+	color: white;
+
+	
+        }
+#closet a:hover	{
+	background-image: transparent:
+}
+
+#mixmatch	{
+	background-image:url(images/runway.jpeg);
+	width: 290px;
+	height: 80px;
+	color: white;
+
+}
+
+#addclothes	{
+	background-image:url(images/empty.jpeg);
+	width: 290px;
+	height: 80px;
+	color: white;
+
+}
+  
+  .ui-btn {font-size: 24px;}      
+        </style>
 
 
 
@@ -93,22 +139,31 @@
     <div data-role="content">
         <img src="images/logo1.fw.png" alt="logo" />
         
-        <div>
-              
-            <a href="#mycloset"
-                data-theme="e" 
-                data-role="button"
-                data-icon="arrow-r"
-                data-iconpos="right"
-                data-transition="flip"
-                >My Closet</a>
+ <!-- 
+  <iframe id="ytplayer" type="text/html" width="240" height="260"
+src="https://www.youtube.com/embed/M7lc1UVf-VE"
+frameborder="0" allowfullscreen></iframe>
+ -->
+
+		
+ 			<a href="#mycloset" 
+ 				data-theme="e" 
+				data-role="button" 				
+ 				data-icon="arrow-r" 
+ 				data-iconpos="right" 
+ 				data-transition="flip"
+ 				id="closet"
+    			>My Closet</a>
+		
                 
+            
             <a href="#mixnmatch"
                 data-theme="e" 
                 data-role="button"
                 data-icon="arrow-r"
                 data-iconpos="right"
                 data-transition="flip"
+                id="mixmatch"
                 >Mix n Match</a>
         
 
@@ -118,6 +173,7 @@
                 data-icon="arrow-r"
                 data-iconpos="right"
                 data-transition="flip"
+                id="addclothes"
                 >Add Clothes</a>
             
         </div><!--End of Content-->

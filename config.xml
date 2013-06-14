@@ -27,5 +27,8 @@
     <plugin name="Capture" value="CDVCapture" />
     <plugin name="Camera" value="CDVCamera" />
     
+ 
+ 
+    
 
 </widget>
